@@ -1,0 +1,75 @@
+import { Steps, Callout } from 'nextra-theme-docs';
+
+# Setup Hardware Virtualization
+ 
+A fairly complicated initial step is to ensure your hardware is configured and
+that [Hardware Virtualization](https://en.wikipedia.org/wiki/Hardware_virtualization)
+is enabled so that you can run another operating system on your Windows PC.
+
+This will allow you to run Ubuntu on your Windows Desktop Environment.
+
+<Steps>
+  ### Step 1: Check it's current status
+  <Callout emoji="💡">
+    If Virtualization is enabled, you can skip the rest of this document and
+    [Install Ubuntu](./install-ubuntu)
+  </Callout>
+
+  We can check whether Virtualization has been enabled by opening the 
+  "Task Manager", you can open this tool by pressing `Ctrl + Shift + Esc`.
+
+  Selecting the **<span style={{"color": "#BB6BD9"}}>"Performance"</span>** Tab
+  at the top, you should be presented with some beautiful charts detailing your
+  computer's current load.
+
+  Clicking **<span style={{"color": "#27AE60"}}>CPU on the left</span>**, and
+  you will see the following; look for the information about
+  **<span style={{"color": "#EB5757"}}>"Virtualization"</span>**.
+
+  ![Windows Task Manager > Performance](/task-manager--virtualization.jpg)
+
+  ### Step 2: Restart into Recovery Mode
+  We will need to configure your PC hardware to enable Windows to Virtualize.
+  We will do this in BIOS/UEFI.
+
+  Let's launch Windows into Recovery Mode. Open the Windows Menu, type
+  "Recovery Options" and open the application:
+
+  ![The Windows Menu showing Recovery Options](/windows-menu--recovery-options.jpg)
+
+  Once the settings window appears click the 
+  **<span style={{"color": "#27AE60"}}>Restart Now</span>** button.
+
+  ![Windows Settings > Recovery](/windows-settings--recovery.jpg)
+
+  ### Step 3: Restart into UEFI
+  Your PC/Laptop will restart and show the following menu. Using your arrow
+  keys to navigate and the enter key to make a selection follow these steps:
+
+  1. Select **Troubleshoot**
+  2. Select **Advanced Options**
+  3. Select **UEFI Firmware Settings**
+
+  or watch the video below:
+
+  <video controls>
+    <source src="/windows--recovery-mode-to-uefi.mp4" type="video/mp4" />
+  </video>
+
+  ### Step 4: Enable CPU Virtualization
+  Once your computer has restarted you will enter into BIOS/UEFI.
+
+  This is the most complicated step of the entire guide. Unfortunately, this
+  option is   different with every manufacturer. It will be found under an
+  option for CPU Configuration; on Intel CPUs this feature is often referred to
+  as `Intel Virtualization Technology`, `Intel VT`; whereas for AMD CPUs this
+  feature is referred to as `AMD-V`, or `SVM Mode`.
+
+  We recommend Googling the process for your hardware
+  [Enable CPU Virtualization in bios on a &lt;YOUR DEVICE&gt;](https://www.google.com/search?q=enable+cpu+virtualization+in+bios+on+a+),
+  for example "enable CPU Virtualization in bios on a Lenovo Laptop" or please
+  reach out to a member of our team and we'll give you a helping hand and
+  further instructions.
+  
+  ![A few of the Various BIOS versions](/bios--cpu-virtualization.jpg)
+</Steps>

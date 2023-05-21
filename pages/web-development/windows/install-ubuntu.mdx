@@ -1,0 +1,56 @@
+import { Steps, Callout, Cards, Card } from 'nextra-theme-docs';
+
+# Install Ubuntu using WSL2
+
+<Steps>
+  ### Step 1: Launch Powershell
+  We'll use Windows Powershell to setup WSL. Open the Windows Menu, type
+  `powershell` and open the application.
+
+  ![A Screenshot of the Powershell app displayed in the Windows Menu](/windows-menu--powershell.jpg)
+
+  ### Step 2: Install WSL & Ubuntu
+  Within Powershell, we will now install the Ubuntu Operating System with WSL.
+  You will be prompted for Administrator permissions during this process, 
+  please press Yes to these prompts.
+
+  ```
+  wsl --install
+  ```
+  ![A Screenshot of Powershell displaying the output of the wsl install command](/powershell-terminal--wsl-install.jpg)
+
+  <Callout type="warning" emoji="⚠️">
+    Once this has completed, be sure to **restart your computer**!
+  </Callout>
+  
+  ### Step 3: Install Ubuntu (continued)
+  Now, we'll repeat the last two steps to finalise the installation. Open the 
+  Windows Menu, once again type `powershell`, open the Application and in the
+  window that appears type:
+
+  ```
+  wsl --install
+  ```
+  You will be prompted for a
+  **<span style={{ color: "#BB6BD9" }}>Username & Password</span>** during the
+  setup. These will be your credentials for the Ubuntu installation, and is
+  seperate to your Windows username and password. We recommend keeping this
+  simple.
+
+  ![A Screenshot of Powershell displaying the output of the Ubuntu install](/powershell-terminal--wsl-install-ubuntu.jpg)
+
+  ### Step 3: Launch Ubuntu
+  Open the Windows Menu, and type "Ubuntu". You should see a new Application as
+  pictured below. Launch the Application, and proceed to follow our Ubuntu
+  Setup Guide.
+
+  ![A Screenshot of the Ubuntu app displayed in the Windows Menu](/windows-menu--ubuntu.jpg)
+</Steps>
+
+<Cards num="1">
+  <Card
+    title="Complete the install with our Ubuntu Guide"
+    arrow="true"
+    href="../ubuntu/"
+  />
+</Cards>
