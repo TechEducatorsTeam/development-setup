@@ -1,8 +1,5 @@
 {
-  "windows": {
-    "index": "Web Dev on Windows",
-    "hardware-virtualization": "Setup Virtualization"
-  },
+  "windows": "Windows 10/11",
   "ubuntu": "Ubuntu",
   "macos": "Mac OS"
 }
