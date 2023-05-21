@@ -2,6 +2,9 @@ import { Steps, Callout, Cards, Card } from 'nextra-theme-docs';
 
 # Install Ubuntu using WSL2
 
+Now that we have enabled Virtualization, we can install Ubuntu using the WSL
+feature.
+
 <Steps>
   ### Step 1: Launch Powershell
   We'll use Windows Powershell to setup WSL. Open the Windows Menu, type
@@ -14,7 +17,7 @@ import { Steps, Callout, Cards, Card } from 'nextra-theme-docs';
   You will be prompted for Administrator permissions during this process, 
   please press Yes to these prompts.
 
-  ```
+  ```sh copy
   wsl --install
   ```
   ![A Screenshot of Powershell displaying the output of the wsl install command](/powershell-terminal--wsl-install.jpg)
@@ -28,7 +31,7 @@ import { Steps, Callout, Cards, Card } from 'nextra-theme-docs';
   Windows Menu, once again type `powershell`, open the Application and in the
   window that appears type:
 
-  ```
+  ```sh copy
   wsl --install
   ```
   You will be prompted for a
