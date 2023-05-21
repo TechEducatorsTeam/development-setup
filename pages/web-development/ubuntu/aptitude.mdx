@@ -1,0 +1,27 @@
+# Installing & Updating OS software
+
+For some things on your system, we will be using Advanced Package Tool,
+referred to as apt, to install applications. The first thing we’ll want to do
+is make sure we're up to date, and then we'll get some basic packages installed
+
+Open your terminal emulator, or if you're on Windows this will be your Ubuntu
+App. Type the following commands into the window:
+
+```sh copy
+sudo apt update
+```
+
+```sh copy
+sudo apt upgrade -y
+```
+Now we'll install a few OS packages:
+
+```sh copy
+sudo apt install -y build-essential tree zsh
+```
+
+## Installing oh-my-zsh (optional)
+
+```sh copy
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
