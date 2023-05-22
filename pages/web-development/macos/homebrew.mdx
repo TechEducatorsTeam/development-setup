@@ -1,0 +1,40 @@
+# Installing Homebrew
+
+Homebrew cites itself as the missing package manager for MacOS. This is a third
+party application to ease in the installation of software on your MacOS system.
+
+Open your terminal and run the following:
+
+```sh copy
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Once this has been completed, the install will suggest a few extra steps. These
+are very important and we repeat them here to be sure:
+
+```sh copy
+echo 'eval "$(`which brew` shellenv)"' >> ~/.zshrc
+```
+```sh copy
+source .zshrc
+```
+
+You can confirm brew is installed correctly by running it's `doctor` command:
+
+```sh copy
+brew doctor
+```
+
+## Installing additional tools
+
+We'll install some basic tools to help during the course:
+
+```sh copy
+brew install tree
+```
+
+## Installing oh-my-zsh (optional)
+
+```sh copy
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
