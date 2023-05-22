@@ -1,4 +1,4 @@
-import { Callout } from 'nextra-theme-docs';
+import { Callout } from "nextra-theme-docs";
 
 # Configure Git, and connect to a VCS provider
 
@@ -14,7 +14,7 @@ it configured.
 ## Register for GitHub
 
 First, we'll need to register an account with Github -
-[https://github.com/signup](https://github.com/signup). 
+[https://github.com/signup](https://github.com/signup).
 
 ## Configure Git locally
 
@@ -45,6 +45,7 @@ First, let's generate your new keys; at your terminal please type:
 ```sh copy
 ssh-keygen
 ```
+
 <Callout emoji="💡">
   You will be asked for a file name, unless you need multiple keys the default
   name is `id_rsa` is fine.
@@ -60,8 +61,8 @@ You should see a similar output in your terminal as below:
 ```
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/username/.ssh/id_rsa):
-Enter passphrase (empty for no passphrase): 
-Enter same passphrase again: 
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
 Your identification has been saved in /home/username/.ssh/id_rsa
 Your public key has been saved in /home/username/.ssh/id_rsa.pub
 The key fingerprint is:
@@ -94,6 +95,7 @@ You should see a similar output in your terminal as below:
 ```sh wrap
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDG2TqKwLLO2B+pp5cZgiKzll8pARuGX/8YH43R4vueMcyFVJiCXs009rioPw69g0D1GTwprFkkyDTRX2PfiKYAUlfPHB12klOIVoISFc/1Y4JqsoghM/91P4SEuXz3q2YvFHBp0gHPUvkv8/WTgOT1XGHMNyFgC2E6SJdiJnsHWf7QK6b5ifDHTgd1wEnLifLlqIQKX3ImQOHZH2pKly37zkB6g8gLBhgPUuhM9x9LeHHx0RR0RkI96kHX9LEcgZz/DyV3/3WxjEb31egjQ/jAQ4RnJL3ftbS4kVYggQxFkpO6WH4OgzPXpwOMqSPwqocx4VCHnGiHzis9LmCSViR9tkxdM7aDhpHlqRb68MVpiIZLjxio1lTcovmqoZW+wjky5bb8Je4DH2eQYgWRLOU0giloFeAQB06TwuIIPM8J3HlTtk7Vm8Jm4imQG8RSnyraKsFULYTtXTwfmw9VjABp+HNlTJJl29S7DdJa9v3qvOHYwrPOf82ykxAF2HdOpNc= username@Computer-Host-Name
 ```
+
 Copy this output and add it to your GitHub SSH Keys,
 [Settings > SSH and GPG keys > New SSH key](https://github.com/settings/ssh/new)
 The key's title is for your own benefit, allowing you to easily identify
@@ -121,6 +123,7 @@ Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
 Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
 PTY allocation request failed on channel 0
 ```
+
 ```
 Hi TechEducatorsTeam! You've successfully authenticated, but GitHub does not provide shell access.
 Connection to github.com closed.

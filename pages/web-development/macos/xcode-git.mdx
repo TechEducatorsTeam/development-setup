@@ -1,4 +1,4 @@
-import { Callout, Steps } from 'nextra-theme-docs';
+import { Callout, Steps } from "nextra-theme-docs";
 
 # Install XCode development tools
 
@@ -9,138 +9,147 @@ the Apple's XCode Development Tools.
 <Steps>
   ### Step 1: Install XCode
 
-  Open the terminal and type:
+Open the terminal and type:
 
-  ```sh copy
-  xcode-select --install
-  ```
-  <Callout type="info" emoji="ℹ️">
-    The developer tools are ~3GB in size. So this process will take
-    approximately 10mins on an average internet connection.
-  </Callout>
+```sh copy
+xcode-select --install
+```
 
-  You can confirm the tool we require has been installed by running:
+{" "}
+<Callout type="info" emoji="ℹ️">
+  The developer tools are ~3GB in size. So this process will take approximately
+  10mins on an average internet connection.
+</Callout>
 
-  ```sh copy
-  git --version
-  ```
+You can confirm the tool we require has been installed by running:
 
-  You should see the following output (correct at time of writing):
+```sh copy
+git --version
+```
 
-  ```
-  git version 2.39.2 (Apple Git-143)
-  ```
+You should see the following output (correct at time of writing):
 
-  We can now use `git` to install the rest of the software we will require.
+```
+git version 2.39.2 (Apple Git-143)
+```
 
-  ### Step 2: Configure Git
+We can now use `git` to install the rest of the software we will require.
 
-  Throughout the course we will be using [Git](https://git-scm.com/) to keep
-  track of our work and publishing it to a VCS provider. During the course we
-  will use Github - a free VCS provider owned by Microsoft. Don't worry, we'll
-  give you an introduction into how to use it and will concentrate on getting
-  setup and configured today.
+### Step 2: Configure Git
 
-  ```sh copy
-  git config --global user.name 'YOUR FULL NAME'
-  ```
+Throughout the course we will be using [Git](https://git-scm.com/) to keep
+track of our work and publishing it to a VCS provider. During the course we
+will use Github - a free VCS provider owned by Microsoft. Don't worry, we'll
+give you an introduction into how to use it and will concentrate on getting
+setup and configured today.
 
-  ```sh copy
-  git config --global user.email 'YOUR EMAIL ADDRESS'
-  ```
+```sh copy
+git config --global user.name 'YOUR FULL NAME'
+```
 
-  <Callout emoji="💡">
-    Make sure `'YOUR EMAIL ADDRESS'` in the command above matches the one you're
-    using with GitHub.
-  </Callout>
+```sh copy
+git config --global user.email 'YOUR EMAIL ADDRESS'
+```
 
-  ### Step 3: Generate your SSH keys
+{" "}
+<Callout emoji="💡">
+  Make sure `'YOUR EMAIL ADDRESS'` in the command above matches the one you're
+  using with GitHub.
+</Callout>
 
-  Now, we'll create credentials for your git client and provide these to GitHub.
-  We'll generate a pair of "[SSH Keys](https://en.wikipedia.org/wiki/Public-key_cryptography)"
-  We refer to one as your public key, and the other as your private key.
+### Step 3: Generate your SSH keys
 
-  First, let's generate your new keys; at your terminal please type:
+Now, we'll create credentials for your git client and provide these to GitHub.
+We'll generate a pair of "[SSH Keys](https://en.wikipedia.org/wiki/Public-key_cryptography)"
+We refer to one as your public key, and the other as your private key.
 
-  ```sh copy
-  ssh-keygen
-  ```
-  <Callout type="info" emoji="ℹ️">
-    You will be asked for a file name, unless you need multiple keys the default
-    name of `id_rsa` is appropriate.
-  </Callout>
+First, let's generate your new keys; at your terminal please type:
 
-  <Callout type="info" emoji="ℹ️">
-    You will be asked for a passphrase, we recommend leaving this empty and
-    instead ensure you keep the private key safe.
-  </Callout>
+```sh copy
+ssh-keygen
+```
 
-  You should see a similar output in your terminal as below:
+{" "}
+<Callout type="info" emoji="ℹ️">
+  You will be asked for a file name, unless you need multiple keys the default
+  name of `id_rsa` is appropriate.
+</Callout>
 
-  ```txt {5-6}
-  Generating public/private rsa key pair.
-  Enter file in which to save the key (/home/username/.ssh/id_rsa):
-  Enter passphrase (empty for no passphrase): 
-  Enter same passphrase again: 
-  Your identification has been saved in /home/username/.ssh/id_rsa
-  Your public key has been saved in /home/username/.ssh/id_rsa.pub
-  The key fingerprint is:
-  SHA256:sk4MR4/BBLy2cXd0fSKqQdjqSfkVkQjz+NLSXyE+sy0 username@Computer-Host-Name
-  The key's randomart image is:
-  +---[RSA 3072]----+
-  |   ...++ ..o .   |
-  |    .o.++ + o o .|
-  |     .=+...+.. o |
-  |    +.=Bo.+. .   |
-  |   ..**+S=+ .    |
-  |    .+o=o. *     |
-  |      +   E .    |
-  |     o     .     |
-  |      .          |
-  +----[SHA256]-----+
-  ```
+{" "}
+<Callout type="info" emoji="ℹ️">
+  You will be asked for a passphrase, we recommend leaving this empty and
+  instead ensure you keep the private key safe.
+</Callout>
 
-  This has created a public and private key in the `/home/username/.ssh`
-  directory, called `id_rsa` & `id_rsa.pub`. Keep the private key safe. We can
-  share the public key `id_rsa.pub` with GitHub or another provider. First let's
-  print out it's contents:
+You should see a similar output in your terminal as below:
 
-  ```sh copy
-  cat /home/username/.ssh/id_rsa.pub
-  ```
-  You should see a similar output in your terminal as below:
+```txt {5-6}
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/username/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /home/username/.ssh/id_rsa
+Your public key has been saved in /home/username/.ssh/id_rsa.pub
+The key fingerprint is:
+SHA256:sk4MR4/BBLy2cXd0fSKqQdjqSfkVkQjz+NLSXyE+sy0 username@Computer-Host-Name
+The key's randomart image is:
++---[RSA 3072]----+
+|   ...++ ..o .   |
+|    .o.++ + o o .|
+|     .=+...+.. o |
+|    +.=Bo.+. .   |
+|   ..**+S=+ .    |
+|    .+o=o. *     |
+|      +   E .    |
+|     o     .     |
+|      .          |
++----[SHA256]-----+
+```
 
-  ```sh wrap
-  ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDG2TqKwLLO2B+pp5cZgiKzll8pARuGX/8YH43R4vueMcyFVJiCXs009rioPw69g0D1GTwprFkkyDTRX2PfiKYAUlfPHB12klOIVoISFc/1Y4JqsoghM/91P4SEuXz3q2YvFHBp0gHPUvkv8/WTgOT1XGHMNyFgC2E6SJdiJnsHWf7QK6b5ifDHTgd1wEnLifLlqIQKX3ImQOHZH2pKly37zkB6g8gLBhgPUuhM9x9LeHHx0RR0RkI96kHX9LEcgZz/DyV3/3WxjEb31egjQ/jAQ4RnJL3ftbS4kVYggQxFkpO6WH4OgzPXpwOMqSPwqocx4VCHnGiHzis9LmCSViR9tkxdM7aDhpHlqRb68MVpiIZLjxio1lTcovmqoZW+wjky5bb8Je4DH2eQYgWRLOU0giloFeAQB06TwuIIPM8J3HlTtk7Vm8Jm4imQG8RSnyraKsFULYTtXTwfmw9VjABp+HNlTJJl29S7DdJa9v3qvOHYwrPOf82ykxAF2HdOpNc= username@Computer-Host-Name
-  ```
-  Copy this output and add it to your GitHub SSH Keys,
-  [Settings > SSH and GPG keys > New SSH key](https://github.com/settings/ssh/new)
-  The key's title is for your own benefit, allowing you to easily identify
-  different keys; we recommend naming it after your computer and generating new
-  keys on each device you use:
+This has created a public and private key in the `/home/username/.ssh`
+directory, called `id_rsa` & `id_rsa.pub`. Keep the private key safe. We can
+share the public key `id_rsa.pub` with GitHub or another provider. First let's
+print out it's contents:
 
-  ![Add your SSH keys to GitHub](/github--ssh-keys.jpg)
+```sh copy
+cat /home/username/.ssh/id_rsa.pub
+```
 
-  ### Step 4: Confirm it's setup
+You should see a similar output in your terminal as below:
 
-  Now, we can confirm this has worked by asking GitHub who it thinks you are:
+```sh wrap
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDG2TqKwLLO2B+pp5cZgiKzll8pARuGX/8YH43R4vueMcyFVJiCXs009rioPw69g0D1GTwprFkkyDTRX2PfiKYAUlfPHB12klOIVoISFc/1Y4JqsoghM/91P4SEuXz3q2YvFHBp0gHPUvkv8/WTgOT1XGHMNyFgC2E6SJdiJnsHWf7QK6b5ifDHTgd1wEnLifLlqIQKX3ImQOHZH2pKly37zkB6g8gLBhgPUuhM9x9LeHHx0RR0RkI96kHX9LEcgZz/DyV3/3WxjEb31egjQ/jAQ4RnJL3ftbS4kVYggQxFkpO6WH4OgzPXpwOMqSPwqocx4VCHnGiHzis9LmCSViR9tkxdM7aDhpHlqRb68MVpiIZLjxio1lTcovmqoZW+wjky5bb8Je4DH2eQYgWRLOU0giloFeAQB06TwuIIPM8J3HlTtk7Vm8Jm4imQG8RSnyraKsFULYTtXTwfmw9VjABp+HNlTJJl29S7DdJa9v3qvOHYwrPOf82ykxAF2HdOpNc= username@Computer-Host-Name
+```
 
-  ```sh copy
-  ssh git@github.com
-  ```
+Copy this output and add it to your GitHub SSH Keys,
+[Settings > SSH and GPG keys > New SSH key](https://github.com/settings/ssh/new)
+The key's title is for your own benefit, allowing you to easily identify
+different keys; we recommend naming it after your computer and generating new
+keys on each device you use:
 
-  You will be asked to confirm the authenticity, simply type yes, and you should
-  see a message confirming "You've successfully authenticated":
+![Add your SSH keys to GitHub](/github--ssh-keys.jpg)
 
-  ```txt {7-8}
-  The authenticity of host 'github.com (140.82.121.3)' can't be established.
-  ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
-  This key is not known by any other names.
-  Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-  Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
-  PTY allocation request failed on channel 0
-  Hi TechEducatorsTeam! You've successfully authenticated, but GitHub does not provide shell access.
-  Connection to github.com closed.
-  ```
+### Step 4: Confirm it's setup
+
+Now, we can confirm this has worked by asking GitHub who it thinks you are:
+
+```sh copy
+ssh git@github.com
+```
+
+You will be asked to confirm the authenticity, simply type yes, and you should
+see a message confirming "You've successfully authenticated":
+
+```txt {7-8}
+The authenticity of host 'github.com (140.82.121.3)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+PTY allocation request failed on channel 0
+Hi TechEducatorsTeam! You've successfully authenticated, but GitHub does not provide shell access.
+Connection to github.com closed.
+```
+
 </Steps>
 Your computer is now setup and ready to start commit'ing.
