@@ -1,4 +1,5 @@
 {
   "aptitude": "Install basics",
+  "git": "Configure git",
   "nodejs": "Install Node.js"
 }
