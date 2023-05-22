@@ -1,0 +1,55 @@
+import { Steps, Callout } from 'nextra-theme-docs';
+
+# Install Node.js with Node Version Manager (aka NVM)
+
+[Node.js](https://nodejs.org/) is a powerful and popular open-source runtime
+environment that allows developers to execute JavaScript code outside of a web
+browser.
+
+It's vast ecosystem of modules and libraries, make it versatile for a wide
+range of applications, including server-side web development, network
+applications, real-time chat applications, and more.
+
+We'll use [Node Version Manager](https://github.com/nvm-sh/nvm) to install and
+manage Node.js for us. Let's get started:
+
+<Steps>
+  ### Step 1: Install NVM
+
+  Let's download and install nvm
+
+  ```sh copy
+  curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.3/install.sh | bash
+  ```
+  This will have installed nvm, but to get started using it in the terminal
+  we're currently using we can source our zsh config with the following command
+
+  ```sh copy
+  source ~/.zshrc
+  ```
+  We now have nvm setup, and can install a Node.js version of our choosing.
+  
+  ### Step 2: Install Node.js 18.x
+
+  At the time of writing, the LTS version is 18. We're going to use nvm now to
+  get that installed:
+
+  ```sh copy
+  nvm install 18
+  ```
+
+  You should see the following output in your terminal:
+
+  ```
+  Downloading and installing node v18.16.0...
+  Downloading https://nodejs.org/dist/v18.16.0/node-v18.16.0-linux-x64.tar.xz...
+  ################################################################################################################# 100.0%
+  Computing checksum with sha256sum
+  Checksums matched!
+  Now using node v18.16.0 (npm v9.5.1)
+  Creating default alias: default -> 18 (-> v18.16.0)
+  ```
+
+  Now, if you type `node --version` you will `v18.16.0` confirming it's setup
+  and you're ready to start building web applications 🎉.
+</Steps>
