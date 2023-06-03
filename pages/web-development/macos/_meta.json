@@ -1,5 +1,5 @@
 {
   "homebrew": "Homebrew",
-  "xcode-git": "Configure Git",
+  "git": "Configure Git",
   "nodejs": "Install Node.js"
 }
