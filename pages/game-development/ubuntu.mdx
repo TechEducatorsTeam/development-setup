@@ -1,15 +1,37 @@
 import { Steps, Callout } from "nextra-theme-docs";
 
-# Installs Unity Hub
+# Checking System Requirements
 
 
 Before we get started it's best to check that your system meets the minimum requirements for the Unity Editor.  
+
+  <Callout type="warning" emoji="⚠️">
+    Make sure you are checking against the system requirements for your operating system, Linux.
+  </Callout>
   
+## Native Linux
+
   1. Check the minimum requirements for the Unity Editor [here](https://docs.unity3d.com/Manual/system-requirements.html#editor)  
   2. Check your system information by running the following command
   ```sh copy
   sudo lshw -short
   ```
+
+## ChromeOS Linux
+
+  1. Check the minimum requirements for the Unity Editor [here](https://docs.unity3d.com/Manual/system-requirements.html#editor)  
+  2. Check your CPU (processor) & RAM (memory).
+      - On your Chromebook, at the bottom right, select the time.
+      - Select Settings -> About ChromeOS -> Diagnostics.
+      - You will then see a page providing you with information about the Chromebooks processor & RAM.  
+        
+      ![ChromeOS Diagnostics](/chromeos-diagnostics.jpg)
+  3. Open a browser tab and enter this URL: [chrome://system/#lspci](chrome://system/#lspci)  
+      - If it doesn't automatically scroll down to the line beginning with "*lspci*" then please scroll down to it.  
+      - Once you're there just click on the 'Expand' button and look for the graphics controller card info.  
+
+## Installing the Unity Hub
+
 <Steps>
 
 
@@ -47,12 +69,9 @@ Before we get started it's best to check that your system meets the minimum requ
     sudo apt install -y unityhub
     ```
   2. Sign in to your Unity ID by selecting the drop down at the top left corner of the screen.
-    [Image of Sign-in]
   3. Select **Unity 2023.3.5f1 LTS**
-    [Image of Ubuntu version selector]
     <Callout emoji="💡">
       Add Microsoft Visual Studio code by selecting the checkbox.
     </Callout>
   4. Click on the Install button at the right bottom corner of your screen.
-    [Image of Install screen]
 </Steps>
