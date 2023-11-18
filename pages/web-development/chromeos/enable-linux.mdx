@@ -1,0 +1,34 @@
+import { Steps, Callout, Cards, Card } from "nextra-theme-docs";
+
+# Enabling linux
+
+To get your Chromebook ready for development work we will need to enable Linux.  
+Linux is off by default but you can turn it on with the simple steps below.  
+
+## Turn on Linux
+
+<Steps>
+  ### Step 1: Check if you have Linux
+
+  If your Chromebook was made in 2019 or more recently then skip to step two.
+  If your Chromebook was manufactured before 2019 then [Click here](https://sites.google.com/a/chromium.org/dev/chromium-os/chrome-os-systems-supporting-linux) to see a list of Chromebooks with Linux
+  <Callout type="warning" emoji="⚠️">
+    If your Chromebook isn't listed here and was made before 2019 then it is likely that you do not have Linux and will be unable to continue.
+  </Callout> 
+
+  ### Step 2: Turn on Linux
+
+  1. On your Chromebook, at the bottom right, select the time.
+  2. Select Settings -> Advanced -> Developers.
+  3. Next to ‘Linux development environment’, select Turn on.
+  4. Follow the on-screen instructions. Setup can take 10 minutes or more.
+  5. A terminal window opens. You will have a Debian 11 (Bullseye) environment. You can run Linux commands, install more tools using the APT package manager and customise your shell.
+</Steps>
+
+<Cards num="1">
+  <Card
+    title="Complete the install with our Ubuntu Guide"
+    arrow="true"
+    href="../ubuntu/"
+  />
+</Cards>
