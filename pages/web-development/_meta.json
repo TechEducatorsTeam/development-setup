@@ -1,5 +1,6 @@
 {
   "windows": "Windows 10/11",
   "ubuntu": "Ubuntu",
-  "macos": "Mac OS"
+  "macos": "Mac OS",
+  "chromeos": "ChromeOS"
 }
