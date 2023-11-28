@@ -1,6 +1,7 @@
 {
-  "windows": "Windows 10/11",
-  "ubuntu": "Ubuntu",
-  "macos": "Mac OS",
-  "chromeos": "ChromeOS"
+	"windows": "Windows 10/11",
+	"ubuntu": "Ubuntu",
+	"macos": "Mac OS",
+	"chromeos": "ChromeOS",
+	"vscode": "VSCode"
 }
