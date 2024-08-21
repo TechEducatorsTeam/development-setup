@@ -82,18 +82,31 @@ The key's randomart image is:
 ```
 
 This has created a public and private key in the `/home/username/.ssh`
-directory, called `id_rsa` & `id_rsa.pub`. Keep the private key safe. We can
-share the public key `id_rsa.pub` with GitHub or another provider. First let's
+directory. The private key is called `id_rsa` (or `id_ed25519`) & the public key is called `id_rsa.pub` (or `id_ed25519.pub`). Keep the private key safe. We can now share our public key with GitHub or another provider. First let's
 print out it's contents:
+
+If your ssh-keygen generated the file "id_rsa.pub" :
 
 ```sh copy
 cat ~/.ssh/id_rsa.pub
+```
+
+If you ssh-keygen generated the file "id_ed25519.pub" :
+
+```sh copy
+cat ~/.ssh/id_ed25519.pub
 ```
 
 You should see a similar output in your terminal as below:
 
 ```sh wrap
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDG2TqKwLLO2B+pp5cZgiKzll8pARuGX/8YH43R4vueMcyFVJiCXs009rioPw69g0D1GTwprFkkyDTRX2PfiKYAUlfPHB12klOIVoISFc/1Y4JqsoghM/91P4SEuXz3q2YvFHBp0gHPUvkv8/WTgOT1XGHMNyFgC2E6SJdiJnsHWf7QK6b5ifDHTgd1wEnLifLlqIQKX3ImQOHZH2pKly37zkB6g8gLBhgPUuhM9x9LeHHx0RR0RkI96kHX9LEcgZz/DyV3/3WxjEb31egjQ/jAQ4RnJL3ftbS4kVYggQxFkpO6WH4OgzPXpwOMqSPwqocx4VCHnGiHzis9LmCSViR9tkxdM7aDhpHlqRb68MVpiIZLjxio1lTcovmqoZW+wjky5bb8Je4DH2eQYgWRLOU0giloFeAQB06TwuIIPM8J3HlTtk7Vm8Jm4imQG8RSnyraKsFULYTtXTwfmw9VjABp+HNlTJJl29S7DdJa9v3qvOHYwrPOf82ykxAF2HdOpNc= username@Computer-Host-Name
+```
+
+or
+
+```sh wrap
+ssh-ed25519 AAAAB3NzaC1yc2EAAAADAQABAAABgQDG2TqKwLLO2B+pp5cZgiKzll8pARuGX/8YH43R4vueMcyFVJiCXs009rioPw69g0D1GTwprFkkyDTRX2PfiKYAUlfPHB12klOIVoISFc/1Y4JqsoghM/91P4SEuXz3q2YvFHBp0gHPUvkv8/WTgOT1XGHMNyFgC2E6SJdiJnsHWf7QK6b5ifDHTgd1wEnLifLlqIQKX3ImQOHZH2pKly37zkB6g8gLBhgPUuhM9x9LeHHx0RR0RkI96kHX9LEcgZz/DyV3/3WxjEb31egjQ/jAQ4RnJL3ftbS4kVYggQxFkpO6WH4OgzPXpwOMqSPwqocx4VCHnGiHzis9LmCSViR9tkxdM7aDhpHlqRb68MVpiIZLjxio1lTcovmqoZW+wjky5bb8Je4DH2eQYgWRLOU0giloFeAQB06TwuIIPM8J3HlTtk7Vm8Jm4imQG8RSnyraKsFULYTtXTwfmw9VjABp+HNlTJJl29S7DdJa9v3qvOHYwrPOf82ykxAF2HdOpNc= username@Computer-Host-Name
 ```
 
 Copy this output and add it to your GitHub SSH Keys,
