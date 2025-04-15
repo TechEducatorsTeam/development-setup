@@ -7,6 +7,22 @@ This guide will help you download, install, configure & customise VSCode.
 - Go to [https://code.visualstudio.com/download](https://code.visualstudio.com/download) to download VSCode.
 - Follow the instructions to install and set it up.
 
+## Enable VS Code from the Terminal
+
+To make it easier to open VS Code from your terminal, run:
+
+```sh copy
+code .
+```
+
+If this doesn't work, you can enable the code command by opening VS Code, opening the Command Pallete by pressing Cmd+Shift+P, then typing:
+
+```sh copy
+Shell Command: Install 'code' command in PATH
+```
+
+and hitting enter.
+
 ## VSCode Extensions
 
 Once you have downloaded and installed VSCode, please install the following extensions.
@@ -16,7 +32,7 @@ Once you have downloaded and installed VSCode, please install the following exte
 - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
 - [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [Tailwind CSS Intellisense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
-- [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) (Windows only)
+- [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) (Windows users only!)
 - [Error Lens](https://marketplace.visualstudio.com/items?itemName=usernamehw.errorlens)
 - [Better Comments](https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments)
 - [Indent Rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)
@@ -33,18 +49,18 @@ Press either `CMD + ,` on mac or `Ctrl + ,` on Windows and Linux to open setting
 
 Once open, go to the search bar at the top to find and edit settings.
 
-- Search for ‘wrap’ and turn it on to prevent side scrolling.
-- Search for ‘tree indent’ and increase the number to create bigger indents on the file tree. We recommend doubling it to 16.
-- Search for ‘compact folder’ and turn this off to create a more legible view of empty folders inside empty folders.
+- Search for ‘wrap’ and change the setting ’Editor: Word Wrap’ to ’On’ This will prevent you from having to scroll the page to see all of your code.
+- Search for ‘tree indent’ and increase the value for the ’Workbench: Tree Indent’ setting to create bigger indents on the file tree. We recommend setting it to 16.
+- Search for ‘compact folder’ and uncheck the box for the ’Explorer: Compact Folders’ setting. This enables a more legible view of empty folders inside empty folders.
 
 ### Configuring VSCode for the Prettier extension
 
-Prettier is well configured out the box however we need to update a couple of settings to make Prettier work with ease. We will be editing settings again so press either `CMD +  ,` on mac or `Ctrl + ,` on Windows & Linux to open settings. Once open, go to the search bar at the top to find and edit settings.
+Prettier is already well configured to automatically format your code, however we need to update a couple of settings to make Prettier work with ease. We will be editing settings again so press either `CMD +  ,` on mac or `Ctrl + ,` on Windows & Linux to open settings. Once open, go to the search bar at the top to find and edit settings.
 
 - Search ‘Default Formatter’ and change it to ‘Prettier - Code formatter’.
-- Search ‘Format On Save’ and ensure it is ticked.
+- Search ‘Format On Save’ and ensure ’Editor: Format on Save’ is ticked.
 
-Once you have done this, your code will be automatically formatted for you when you manually save your document (this won’t kick in with autosave).
+Once you have done this, your code will be automatically formatted for you when you manually save your document (this won’t kick in with autosave but we STRONGLY recommend that you do not enable autosave).
 
 ## Customising VSCode with Themes & Icons
 
