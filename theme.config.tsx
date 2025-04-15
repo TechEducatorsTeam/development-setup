@@ -1,18 +1,23 @@
-import React from 'react'
-import { DocsThemeConfig } from 'nextra-theme-docs'
+import React from "react";
+import { DocsThemeConfig } from "nextra-theme-docs";
 
 const config: DocsThemeConfig = {
-  logo: <span>TechEducators_</span>,
+  head: (
+    <>
+      <link rel="icon" href="/favicon.ico" />
+    </>
+  ),
+  logo: <img src="techEdLogo.png"></img>,
   project: {
-    link: 'https://techeducators.co.uk/',
+    link: "https://techeducators.co.uk/",
   },
   chat: {
-    link: 'https://discord.gg/zEeTnhfzdt',
+    link: "https://discord.gg/zEeTnhfzdt",
   },
-  docsRepositoryBase: 'https://github.com/TechEducatorsTeam/development-setup',
+  docsRepositoryBase: "https://github.com/TechEducatorsTeam/development-setup",
   footer: {
-    text: 'TechEducators_',
+    text: "TechEducators_",
   },
-}
+};
 
-export default config
+export default config;
