@@ -7,7 +7,7 @@ const config: DocsThemeConfig = {
       <link rel="icon" href="/favicon.ico" />
     </>
   ),
-  logo: <img src="techEdLogo.png"></img>,
+  logo: <img src="/techEdLogo.png"></img>,
   project: {
     link: "https://techeducators.co.uk/",
   },
